@@ -4,7 +4,11 @@
 
 Programar el siguiente código:
 
-```
+```c
+#include <Arduino.h>
+
+void anotherTask( void * parameter );
+
 void setup()
 {
 Serial.begin(112500);
@@ -40,20 +44,25 @@ vTaskDelete( NULL );
 }
 ```
 
-### Describir la salida por el puerto série
+### Describir la salida por el puerto série (Imàtge)
 
-apsdfiajspfj
+![Captura_p3_ex1](https://github.com/paudresaire/p3/assets/125595278/faee1c0c-4cc8-4e76-82af-39ede6e0ec91)
+
+
+
+
 
 ### Explicar el funcionamiento
 
-adspfijsf
+El programa serveix per veure que hi ha dos processos executant-se a la vegada, un dins el loop i l’altre des de la funció “anotherTask” que s’executra al setup.
+Des de l’impressió sèrie podem veure com es van intercalant els missatges que treu cada funció, a diferència d’exemples anteriors utilitzant funcions com “delay”. 
 
 
 # Ejercicio Práctico 2
 
 Programa que enciende dos leds con tiempos de transición diferentes simultaniamente
 
-```
+```cpp
 #include <Arduino.h>
 
 int pin_led1 = 23;
@@ -106,5 +115,3 @@ vTaskDelay(300 / portTICK_PERIOD_MS);
 ### Vídeo que muestra el funcionamiento del código
 
 [![IMAGE ALT TEXT](https://user-images.githubusercontent.com/125595278/228276521-23af8e58-4edf-4e23-aa8b-f4e6ba9a2187.jpg)](https://youtu.be/JYZZY1sFzr8)
-
-
